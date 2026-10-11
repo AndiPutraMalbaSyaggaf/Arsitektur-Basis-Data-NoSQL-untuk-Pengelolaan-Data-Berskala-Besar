@@ -107,4 +107,10 @@ ecommerce_db> db.produk.insertMany([ ... ])
 ## 5. deleteOne
 { acknowledged: true, deletedCount: 1 }
 
-## 
+## 6. Aggregation (urutan grup bisa berbeda). Hasil ini sudah memperhitungkan update P003 (harga 80.000) dan penghapusan P010, sehingga kategori Lifestyle tidak muncul.
+[
+  { _id: 'Elektronik', jumlahProduk: 4, rataRataHarga: 3275000 },
+  { _id: 'Pakaian', jumlahProduk: 3, rataRataHarga: 120000 },
+  { _id: 'Olahraga', jumlahProduk: 1, rataRataHarga: 450000 },
+  { _id: 'Aksesoris', jumlahProduk: 1, rataRataHarga: 220000 }
+]
